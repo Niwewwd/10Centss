@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-import React from "react";
-
-export default function Navbar() {
-  return <nav className="p-4">Navbar</nav>;
-}
-=======
 import React, { useState, useEffect } from "react";
 import { Menu, X, Flame } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -65,7 +58,11 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-rice p-2"
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </nav>
@@ -103,4 +100,3 @@ export default function Navbar() {
     </>
   );
 }
->>>>>>> Stashed changes

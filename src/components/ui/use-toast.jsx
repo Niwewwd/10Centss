@@ -56,7 +56,7 @@ export const reducer = (state, action) => {
       return {
         ...state,
         toasts: state.toasts.map((t) =>
-          t.id === action.toast.id ? { ...t, ...action.toast } : t
+          t.id === action.toast.id ? { ...t, ...action.toast } : t,
         ),
       };
 
@@ -81,7 +81,7 @@ export const reducer = (state, action) => {
                 ...t,
                 open: false,
               }
-            : t
+            : t,
         ),
       };
     }
@@ -99,7 +99,7 @@ export const reducer = (state, action) => {
   }
 };
 
-const listeners = [];
+const listeners = new Set();
 
 let memoryState = { toasts: [] };
 
@@ -145,19 +145,17 @@ function useToast() {
   const [state, setState] = useState(memoryState);
 
   useEffect(() => {
-    listeners.push(setState);
+    listeners.add(setState);
     return () => {
-      const index = listeners.indexOf(setState);
-      if (index > -1) {
-        listeners.splice(index, 1);
-      }
+      listeners.delete(setState);
     };
-  }, [state]);
+  }, []);
 
   return {
     ...state,
     toast,
-    dismiss: (toastId) => dispatch({ type: actionTypes.DISMISS_TOAST, toastId }),
+    dismiss: (toastId) =>
+      dispatch({ type: actionTypes.DISMISS_TOAST, toastId }),
   };
 }
 

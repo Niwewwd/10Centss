@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-import React from "react";
-
-export default function ContactSection() {
-  return <section className="p-4">ContactSection</section>;
-}
-=======
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { MapPin, Phone, Clock, MessageCircle, Instagram } from "lucide-react";
@@ -62,12 +55,15 @@ export default function ContactSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Info cards */}
           <div className="space-y-4">
             {INFO.map((item, i) => {
               const Wrapper = item.link ? "a" : "div";
               const wrapperProps = item.link
-                ? { href: item.link, target: "_blank", rel: "noopener noreferrer" }
+                ? {
+                    href: item.link,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  }
                 : {};
               return (
                 <motion.div
@@ -95,7 +91,6 @@ export default function ContactSection() {
             })}
           </div>
 
-          {/* WhatsApp CTA */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -109,8 +104,8 @@ export default function ContactSection() {
               PEÇA PELO WHATSAPP
             </h3>
             <p className="text-rice/50 mb-8 max-w-sm">
-              Faça seu pedido de forma rápida e prática. É só mandar uma mensagem 
-              que já preparamos tudo pra você!
+              Faça seu pedido de forma rápida e prática. É só mandar uma
+              mensagem que já preparamos tudo pra você!
             </p>
             <a
               href="https://wa.me/5500000000000"
@@ -125,9 +120,7 @@ export default function ContactSection() {
         </div>
       </div>
 
-      {/* Ember accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-ember/20 to-transparent" />
     </section>
   );
 }
->>>>>>> Stashed changes

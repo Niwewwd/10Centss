@@ -1,15 +1,9 @@
-<<<<<<< Updated upstream
-import React from "react";
-
-export default function AboutSection() {
-  return <section className="p-4">AboutSection</section>;
-}
-=======
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Flame, Fish, Award, Clock } from "lucide-react";
 
-const CITY_IMG = "https://media.base44.com/images/public/6a4c4d2dbad7e59b4a110a8e/2a48bf8cc_generated_572707c0.png";
+const CITY_IMG =
+  "https://media.base44.com/images/public/6a4c4d2dbad7e59b4a110a8e/2a48bf8cc_generated_572707c0.png";
 
 const STATS = [
   { icon: Fish, value: "30+", label: "Variedades no Cardápio" },
@@ -24,7 +18,6 @@ export default function AboutSection() {
 
   return (
     <section id="about" ref={ref} className="relative py-24 overflow-hidden">
-      {/* Background image */}
       <div className="absolute inset-0">
         <img
           src={CITY_IMG}
@@ -52,14 +45,13 @@ export default function AboutSection() {
             DE TÓQUIO PARA <span className="text-ember">SUA CIDADE</span>
           </h2>
           <p className="text-rice/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            A Brasa Tokio nasceu da paixão por unir o melhor da culinária japonesa 
-            com o calor e a intensidade da brasa brasileira. Cada peça é preparada com 
-            ingredientes frescos e técnicas que respeitam a tradição, trazendo o sabor 
-            autêntico de Tóquio direto para a sua mesa.
+            A Brasa Tokio nasceu da paixão por unir o melhor da culinária
+            japonesa com o calor e a intensidade da brasa brasileira. Cada peça
+            é preparada com ingredientes frescos e técnicas que respeitam a
+            tradição, trazendo o sabor autêntico de Tóquio direto para sua mesa.
           </p>
         </motion.div>
 
-        {/* Stats grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {STATS.map((stat, i) => (
             <motion.div
@@ -79,9 +71,7 @@ export default function AboutSection() {
         </div>
       </div>
 
-      {/* Ember accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-ember/20 to-transparent" />
     </section>
   );
 }
->>>>>>> Stashed changes

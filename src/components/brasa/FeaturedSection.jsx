@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-import React from "react";
-
-export default function FeaturedSection() {
-  return <section className="p-4">FeaturedSection</section>;
-}
-=======
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
@@ -51,7 +44,11 @@ export default function FeaturedSection() {
   };
 
   return (
-    <section id="featured" ref={sectionRef} className="relative py-24 overflow-hidden">
+    <section
+      id="featured"
+      ref={sectionRef}
+      className="relative py-24 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -120,7 +117,9 @@ export default function FeaturedSection() {
                   </h3>
                   <p className="text-rice/50 text-sm mb-4">{item.desc}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-gold font-bold text-xl">{item.price}</span>
+                    <span className="text-gold font-bold text-xl">
+                      {item.price}
+                    </span>
                     <a
                       href="https://wa.me/5500000000000"
                       target="_blank"
@@ -137,9 +136,7 @@ export default function FeaturedSection() {
         </div>
       </div>
 
-      {/* Ember accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-ember/20 to-transparent" />
     </section>
   );
 }
->>>>>>> Stashed changes

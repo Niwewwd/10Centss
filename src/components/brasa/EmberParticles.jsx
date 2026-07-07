@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-import React from "react";
-
-export default function EmberParticles() {
-  return null;
-}
-=======
 import React, { useMemo } from "react";
 
 export default function EmberParticles() {
@@ -40,4 +33,3 @@ export default function EmberParticles() {
     </div>
   );
 }
->>>>>>> Stashed changes

@@ -1,19 +1,16 @@
 import React from "react";
-<<<<<<< Updated upstream
-
-export default function HeroSection() {
-  return <section className="p-4">HeroSection</section>;
-}
-=======
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
-const HERO_IMG = "https://media.base44.com/images/public/6a4c4d2dbad7e59b4a110a8e/0a02d7ed4_generated_a81631bf.png";
+const HERO_IMG =
+  "https://media.base44.com/images/public/6a4c4d2dbad7e59b4a110a8e/0a02d7ed4_generated_a81631bf.png";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       <div className="absolute inset-0">
         <img
           src={HERO_IMG}
@@ -24,7 +21,6 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-obsidian/80 to-transparent" />
       </div>
 
-      {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 w-full">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -46,8 +42,9 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-rice/70 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
-            A fusão perfeita entre o fogo da brasa e a precisão da culinária japonesa. 
-            Sabores que transformam cada refeição em uma experiência inesquecível.
+            A fusão perfeita entre o fogo da brasa e a precisão da culinária
+            japonesa. Sabores que transformam cada refeição em uma experiência
+            inesquecível.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -69,7 +66,6 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.a
         href="#featured"
         animate={{ y: [0, 8, 0] }}
@@ -79,9 +75,7 @@ export default function HeroSection() {
         <ChevronDown className="w-8 h-8" />
       </motion.a>
 
-      {/* Ember accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-ember/50 to-transparent" />
     </section>
   );
 }
->>>>>>> Stashed changes

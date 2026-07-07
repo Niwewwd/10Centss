@@ -1,10 +1,4 @@
 import React from "react";
-<<<<<<< Updated upstream
-
-export default function Footer() {
-  return <footer className="p-4">Footer</footer>;
-}
-=======
 import { Flame, Instagram, Phone } from "lucide-react";
 
 export default function Footer() {
@@ -46,4 +40,3 @@ export default function Footer() {
     </footer>
   );
 }
->>>>>>> Stashed changes
